@@ -20,6 +20,7 @@
 <script>
 function output() {
   var text = document.querySelector('#text').value;
+  document.querySelector('#output').innerHTML = '';
   jQuery('#output').qrcode(text);
 }
 </script>
