@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo page</title>
+
+</head>
+<body>
+<p></p>
+
+<div>
+  <input type="text" value="" id="text" placeholder="String to convert to QR code" />
+  <input type="button" value="generate" onclick="output()" />
+</div>
+<hr />
+
+<div id="output"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.qrcode.min.js"></script>
+<script>
+function output() {
+  var text = document.querySelector('#text').value;
+  jQuery('#output').qrcode(text);
+}
+</script>
+
+</body>
+</html>
